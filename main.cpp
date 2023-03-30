@@ -24,10 +24,12 @@ int main(int argv, char* args[])
 		std::cout << "oh yeh" << std::endl;
 	}
 
-	RenderWindow window("Game", 1280, 720);
+	RenderWindow window("Game", 960, 540);
 
 	bool gameRunning = true;
 	SDL_Event event;
+
+	SDL_Texture* sedLinus = window.loadTex("res/monke.png");
 
 	while(gameRunning)
 	{
@@ -39,6 +41,10 @@ int main(int argv, char* args[])
 				std::cout << "o keh\n";
 			}
 		}
+
+		window.clear();
+		window.render(sedLinus);
+		window.display();
 	}
 
 	window.cleanUp();

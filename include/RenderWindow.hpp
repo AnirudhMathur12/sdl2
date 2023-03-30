@@ -8,7 +8,10 @@ class RenderWindow
 		RenderWindow(const char* p_title, int p_w, int p_h);
 		SDL_Texture* loadTex(const char* p_filePath);
 		void cleanUp();
+		void clear();
+		void render(SDL_Texture* p_tex);
+		void display();
 	private:
-		SDL_Window* win;
-		SDL_Renderer* rend;
+		SDL_Window* window;
+		SDL_Renderer* renderer;
 };

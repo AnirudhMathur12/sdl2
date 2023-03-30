@@ -14,6 +14,6 @@ game:
 	$(CC) $(SRC_FILES) -o $(APP_NAME) $(INC) $(LIB)
 	./$(APP_NAME)
 
-clean:
-	rm game
-
+regame:
+	rm $(APP_NAME)
+	make game
