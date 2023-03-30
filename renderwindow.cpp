@@ -4,7 +4,8 @@
 
 #include "RenderWindow.hpp"
 
-RenderWindow::RenderWindow(const char* p_title, int p_w, int p_h) : win(NULL), rend(NULL)
+RenderWindow::RenderWindow(const char* p_title, int p_w, int p_h) 
+	: win(NULL), rend(NULL)
 {
 	win = SDL_CreateWindow(p_title, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, p_w, p_h, SDL_WINDOW_SHOWN);
 	if(win == NULL)
